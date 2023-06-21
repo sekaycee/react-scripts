@@ -310,6 +310,10 @@ module.exports = function (webpackEnv) {
       modules: ['node_modules', paths.appNodeModules].concat(
         modules.additionalModulePaths || []
       ),
+      fallback: {
+        path: false,
+        util: false
+      },
       // These are the reasonable defaults supported by the Node ecosystem.
       // We also include JSX as a common component filename extension to support
       // some tools, although we do not recommend using it, see:
